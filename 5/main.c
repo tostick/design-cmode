@@ -49,10 +49,13 @@ Shoe* manufacture_new_shoe(int type)
 
 int main(int argc, char **argv)
 {
-	Shoe *p1 = NULL;
+	Shoe *p = NULL;
 
-	p1 = manufacture_new_shoe(RUBBER_TYPE);
-	p1->print_shoe(p1);
+	// p为产品
+	// 工厂只有一个鞋子门面， 输出是不同的鞋子
+	p = manufacture_new_shoe(RUBBER_TYPE);
+	p->print_shoe(p);
 
+	free(p);
 	return 0;
 }
